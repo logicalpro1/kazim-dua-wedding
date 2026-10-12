@@ -1,0 +1,281 @@
+@import url("common.css");
+@import url("animation.css");
+
+html {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+.with-scrollbar {
+    scrollbar-width: auto !important;
+    -ms-overflow-style: auto !important;
+}
+
+.font-esthetic {
+    font-family: 'Great Vibes', cursive !important;
+}
+
+.font-arabic {
+    font-family: 'Noto Naskh Arabic', serif !important;
+}
+
+.img-center-crop {
+    width: 13rem;
+    height: 13rem;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+html[data-bs-theme="dark"] .btn-transparent {
+    background-color: rgba(var(--bs-dark-rgb), 0.5) !important;
+    backdrop-filter: blur(0.5rem);
+}
+
+html[data-bs-theme="light"] .btn-transparent {
+    background-color: rgba(var(--bs-light-rgb), 0.5) !important;
+    backdrop-filter: blur(0.5rem);
+}
+
+.loading-page {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1056;
+}
+
+html[data-bs-theme="light"] .color-theme-svg {
+    color: rgb(255, 255, 255);
+    background-color: var(--bs-light);
+}
+
+html[data-bs-theme="dark"] .color-theme-svg {
+    color: rgb(0, 0, 0);
+    background-color: var(--bs-dark);
+}
+
+html[data-bs-theme="light"] .bg-light-dark {
+    background-color: rgb(var(--bs-light-rgb));
+}
+
+html[data-bs-theme="dark"] .bg-light-dark {
+    background-color: rgb(var(--bs-dark-rgb));
+}
+
+html[data-bs-theme="light"] .bg-white-black {
+    background-color: rgb(var(--bs-white-rgb));
+}
+
+html[data-bs-theme="dark"] .bg-white-black {
+    background-color: rgb(var(--bs-black-rgb));
+}
+
+.bg-cover-home {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(0.5turn, transparent, black 40%, black 60%, transparent);
+}
+
+.width-loading {
+    width: 25%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+    .width-loading {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .width-loading {
+        width: 75%;
+    }
+}
+
+svg {
+    display: block;
+    line-height: 0;
+    shape-rendering: geometricPrecision;
+    backface-visibility: hidden;
+}
+
+.svg-wrapper {
+    overflow: hidden !important;
+    transform: translateZ(0) !important;
+}
+
+.no-gap-bottom {
+    margin-bottom: -0.75rem !important;
+}
+/* ===================================================================
+   Wedding theme: maroon & gold (Pakistani wedding palette)
+   Edit the colours here to restyle the whole invitation.
+   =================================================================== */
+html[data-bs-theme="light"] {
+    --wd-bg: 255, 251, 244;        /* ivory      - main sections   */
+    --wd-bg-alt: 247, 236, 219;    /* warm beige - alt sections    */
+    --wd-card: 255, 255, 255;      /* cards                        */
+    --wd-accent: 122, 26, 50;      /* maroon                       */
+    --wd-gold: 176, 134, 52;       /* antique gold                 */
+    --wd-text: 58, 32, 36;
+    --bs-body-color: rgb(var(--wd-text));
+    --bs-body-bg: rgb(var(--wd-bg));
+}
+
+html[data-bs-theme="dark"] {
+    --wd-bg: 20, 9, 13;
+    --wd-bg-alt: 34, 15, 22;
+    --wd-card: 48, 22, 32;
+    --wd-accent: 226, 192, 120;    /* gold on dark                 */
+    --wd-gold: 212, 175, 95;
+    --wd-text: 244, 232, 214;
+    --bs-body-color: rgb(var(--wd-text));
+    --bs-body-bg: rgb(var(--wd-bg));
+}
+
+html[data-bs-theme] .bg-white-black {
+    background-color: rgb(var(--wd-bg)) !important;
+}
+
+html[data-bs-theme] .bg-light-dark {
+    background-color: rgb(var(--wd-bg-alt)) !important;
+}
+
+html[data-bs-theme] .color-theme-svg {
+    color: rgb(var(--wd-bg)) !important;
+    background-color: rgb(var(--wd-bg-alt)) !important;
+}
+
+html[data-bs-theme] .bg-theme-auto {
+    background-color: rgb(var(--wd-card)) !important;
+}
+
+html[data-bs-theme] .navbar {
+    background-color: rgba(var(--wd-bg-alt), 0.85) !important;
+}
+
+html[data-bs-theme] .nav-link.active,
+html[data-bs-theme] .nav-link:hover {
+    color: rgb(var(--wd-accent)) !important;
+}
+
+html[data-bs-theme] .bg-overlay-auto {
+    background-color: rgba(var(--wd-bg), 0.55);
+}
+
+html[data-bs-theme] .btn-outline-auto {
+    --bs-btn-color: rgb(var(--wd-accent));
+    --bs-btn-border-color: rgb(var(--wd-accent));
+    --bs-btn-hover-color: rgb(var(--wd-bg));
+    --bs-btn-hover-bg: rgb(var(--wd-accent));
+    --bs-btn-hover-border-color: rgb(var(--wd-accent));
+    --bs-btn-active-color: rgb(var(--wd-bg));
+    --bs-btn-active-bg: rgb(var(--wd-accent));
+    --bs-btn-active-border-color: rgb(var(--wd-accent));
+}
+
+.font-esthetic,
+.text-accent {
+    color: rgb(var(--wd-accent));
+}
+
+.font-arabic {
+    color: rgb(var(--wd-gold));
+}
+
+.border-gold {
+    border-color: rgb(var(--wd-gold)) !important;
+}
+
+.letter-wide {
+    letter-spacing: 0.25em;
+}
+
+.ornament-line {
+    width: 5rem;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgb(var(--wd-gold)), transparent);
+}
+
+.event-card {
+    border: 1px solid rgba(var(--wd-gold), 0.45);
+    position: relative;
+}
+
+.event-card::before {
+    content: "";
+    position: absolute;
+    inset: 0.4rem;
+    border: 1px dashed rgba(var(--wd-gold), 0.35);
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.event-card .btn {
+    position: relative;
+    z-index: 1;
+}
+
+.progress {
+    --bs-progress-bar-bg: rgb(var(--wd-accent));
+}
+
+.form-check-input:checked {
+    background-color: rgb(var(--wd-accent));
+    border-color: rgb(var(--wd-accent));
+}
+
+.btn-whatsapp {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #25d366;
+    --bs-btn-border-color: #25d366;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #1ebe5b;
+    --bs-btn-hover-border-color: #1ebe5b;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #1aa851;
+    font-weight: 600;
+}
+
+/* Duas & Blessings: Urdu sher card */
+.font-urdu {
+    font-family: 'Noto Nastaliq Urdu', 'Noto Naskh Arabic', serif;
+    font-size: 1.3rem;
+    line-height: 2.6;
+    color: rgb(var(--wd-gold));
+}
+
+.sher-card {
+    border: 1px solid rgba(var(--wd-gold), 0.45);
+}
+
+.sher-fade {
+    transition: opacity 350ms ease;
+}
+
+.sher-hidden {
+    opacity: 0;
+}
+
+.dua-chip {
+    font-size: 0.78rem;
+}
+
+.rsvp-card {
+    border: 1px solid rgba(var(--wd-gold), 0.45);
+}
+
+.couple-art {
+    max-width: 18rem;
+    padding: 0.5rem;
+    background: #fff;
+    border: 2px solid rgb(var(--wd-gold));
+    border-radius: 1.25rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.18);
+}
